@@ -1,0 +1,145 @@
+.sliderContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.sliderWrapper {
+  width: 100%;
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  margin-bottom: 26px;
+}
+
+.sliderCounter {
+
+}
+
+.sliderArrows {
+  display: flex;
+  gap: 12px;
+}
+
+.sliderArrowWrap {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 66px;
+  height: 66px;
+  border-radius: 50%;
+  background-color: transparent;
+  stroke: #173D33;
+  border: 1px solid;
+  border-color: #173D33;
+  transition: border-color 250ms var(--transition-time), stroke 250ms var(--transition-time);
+
+  &:hover {
+    stroke: #97D28B;
+    border-color: #97D28B;
+  }
+}
+
+.sliderArrowLeft {
+  transform: rotate(-180deg);
+}
+
+.slidesContainer {
+  overflow: hidden;
+  width: 320px;
+  height: 318px;
+  position: relative;
+  display: flex;
+  gap: 24px;
+  @media screen and (min-width:768px) { 
+    width: 708px;
+    
+  }
+}
+
+.slide {
+  height: 318px;
+  
+  /* position: absolute;  */
+  transition: transform 0.3s ease;
+  display: flex;
+  flex-direction: column; 
+ 
+
+}
+
+.slideImage{
+  width: 320px;
+  
+}
+
+.slideInfo{
+  
+padding: 24px 12px 12px;
+background: #EAEDF1;
+}
+
+.slideTitleWrap{
+  position: relative;
+  display: flex;
+  height: 88px;
+  gap: 61px;
+  padding-bottom: 20px;
+}
+
+.slideTitleWrap::after {
+  content: "";
+  position: absolute;
+  display: block;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  height: 1px;
+  background-color: #97D28B;
+}
+
+.slideTitle{
+  width: 175px;
+  text-align: justify;
+  font-size: 18px;
+  line-height: normal;
+  letter-spacing: -0.04em;
+}
+
+.slideArrow{
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background: #97D28B;
+  stroke: #173D33;
+  transform: rotate(-45deg);
+  border-color: transparent;
+  transition: background 250ms var(--transition-time), stroke 250ms var(--transition-time);
+
+  & svg{
+    width: 28px;
+    height: 28px;
+  }
+  &:hover {
+    stroke: #97D28B;
+    background: #173D33;
+  }
+}
+
+.slideDescriptionWrap{
+  display: flex;
+  justify-content: space-between;
+  padding-top: 12px;
+  font-family: Fira Sans;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  letter-spacing: -0.48px;
+}
+
+
+
+
+

@@ -31,24 +31,90 @@
 }
 
 .electricity__title {
+  width: 286px;
   font-family: "Oswald";
   font-size: 28px;
   font-weight: 400;
   line-height: 1;
   text-transform: uppercase;
-  margin-bottom: 24px;
   text-align: center;
+  margin-left: auto;
+  margin-right: auto;
 
   @media screen and (min-width: 768px) {
     font-size: 36px;
-    width: 272px;
-    margin-right: 82px;
-    margin-bottom: 0;
+    width: 368px; 
   }
 
   @media screen and (min-width: 1280px) {
     font-size: 48px;
-    width: 365px;
-    margin-right: 264px;
+    width: 491px;
+  }
+}
+
+.electricity__timer::before {
+  content: "";
+  position: absolute;
+  display: block;
+  top: 24px;
+  right: 50%;
+  width: 1px;
+  height: 48px;
+  background-color: #97D28B;
+}
+
+.electricity__timer{
+  position: relative;
+  padding-top: 96px;
+  display: flex;
+  margin-left: auto;
+  margin-right: auto;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  @media screen and (min-width: 768px) {
+    padding-top: 135px;
+    &::before {
+      height: 87px;
+    }
+  }
+  
+  @media screen and (min-width: 1280px) {
+    padding-top: 120px;
+    &::before {
+        top: 16px;
+      }
+  }
+}
+
+
+
+.electricity__timerNumbers{
+  color: #97D28B;  
+  text-align: center;
+  font-family: "Oswald";
+  font-size: 48px;
+  font-weight: 700;
+  line-height: 1;
+  text-transform: uppercase;
+  @media screen and (min-width: 768px) {
+    font-size: 100px;
+  }
+  @media screen and (min-width: 1280px) {
+    font-size: 164px;
+  }
+}
+
+.electricity__timerText{
+  font-family: "Oswald";
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1;
+  @media screen and (min-width: 768px) {
+    font-size: 28px;
+  }
+  @media screen and (min-width: 1280px) {
+    font-size: 48px;
   }
 }

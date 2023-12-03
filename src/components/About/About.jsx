@@ -8,8 +8,6 @@ import img1Desk2x from '../../images/img1-desk@2x.jpg';
 import img2Desk from '../../images/img2-desk.jpg';
 import img2Desk2x from '../../images/img2-desk@2x.jpg';
 
-
-
 import styles from './About.module.css';
 
 

@@ -67,17 +67,32 @@
 }
 
 .about__info{
+  position: relative;
     text-align: justify;
     line-height: normal;
     letter-spacing: -0.04em;
     @media screen and (min-width: 768px) {
       max-width: 342px;
+      &::before {
+        content: "";
+        position: absolute;
+        display: block;
+        top: 0;
+        left: -11px;
+        width: 1px;
+        height: 100%;
+        background-color: #97D28B;
+      }
     }
   
     @media screen and (min-width: 1280px) {
       max-width: 459px;
+      &::before {
+        left: -161px;
+
+      }
     }
-}
+} 
 
 .about__values{
   display: grid;

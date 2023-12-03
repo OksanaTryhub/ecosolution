@@ -10,3 +10,4 @@ export { CircleIcon } from './CircleIcon';
 export { GlobeIcon } from './GlobeIcon';
 export { ChipIcon } from './ChipIcon';
 export { PodiumIcon } from './PodiumIcon';
+export { SliderArrowIcon } from './SliderArrowIcon';
