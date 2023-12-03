@@ -1,0 +1,153 @@
+.container{
+  position: relative;
+  max-width: 480px;
+    padding: 24px 20px;
+    margin: 0 auto;
+    letter-spacing: -0.04em;
+
+    @media screen and (min-width: 480px) {
+      max-width: 480px;
+    }
+  
+    @media screen and (min-width: 768px) {
+      max-width: 768px;
+      padding: 40px 30px;
+    }
+  
+    @media screen and (min-width: 1280px) {
+      max-width: 1280px;
+      padding: 40px 19px;
+    }
+}
+
+.container::before {
+  content: "";
+  position: absolute;
+  display: block;
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 1px;
+  background-color: #97D28B;
+}
+
+.container__sm {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  gap: 24px;
+
+  @media screen and (min-width: 768px) {
+    display: none;
+  }
+}
+
+.footer__logoWrapper{
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+}
+
+.footer__logoLink{
+  display: flex;
+  fill: #173D33;
+  cursor: pointer;
+  transition: fill 250ms var(--transition-time);
+
+  &:hover {
+    fill: #97D28B;
+  }
+}
+
+.footer__upArrowBtn{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  border: none;
+  outline: none;
+  background-color: #97D28B;
+  cursor: pointer;
+  stroke: #173D33;
+  transition: background-color 250ms var(--transition-time), stroke 250ms var(--transition-time);
+
+  &:hover {
+    background-color: #173D33;
+    stroke: #97D28B;;
+  }
+}
+
+.footer__socials{
+  display: flex;
+  gap: 8px;
+}
+
+.footer__socialIcon {
+  color: #173D33;
+  stroke: #173D33;
+  transition: color 250ms var(--transition-time), stroke 250ms var(--transition-time);
+}
+
+.footer__social:hover .footer__socialIcon{
+  stroke: #97D28B;
+  color: #97D28B;
+}
+
+.footer__contacts{ 
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  
+  font-weight: 400;
+  letter-spacing: -0.04em;
+}
+
+.footer__contactsList{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 16px;
+}
+
+.container__xl{
+  display: none;
+  @media screen and (min-width: 768px) {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+}
+
+.blocksWrap{
+  display: flex; 
+  align-items: center;
+  justify-content: space-between;
+  gap: 50px;
+
+  @media screen and (min-width: 1280px) {
+    gap: 167px;
+  }
+}
+
+.block1{
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.block2{
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+}
+
+.block3{
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 24px;
+}

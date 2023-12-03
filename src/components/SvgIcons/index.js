@@ -1,0 +1,12 @@
+export {LogoIcon} from './LogoIcon';
+export {MenuIcon} from './MenuIcon';
+export { CloseIcon } from './CloseIcon';
+export { FbIcon } from './FbIcon';
+export { InstagramIcon } from './InstagramIcon';
+export { ArrowRightIcon } from './ArrowRightIcon';
+export { ArrowUpIcon } from './ArrowUpIcon';
+export { ArrowDownIcon } from './ArrowDownIcon';
+export { CircleIcon } from './CircleIcon';
+export { GlobeIcon } from './GlobeIcon';
+export { ChipIcon } from './ChipIcon';
+export { PodiumIcon } from './PodiumIcon';
