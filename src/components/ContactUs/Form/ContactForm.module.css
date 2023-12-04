@@ -1,0 +1,126 @@
+.form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  padding: 36px 12px;
+  background-color: #EAEDF1;
+  margin-bottom: 36px;
+
+  @media screen and (min-width: 768px) {
+    padding: 36px 24px;
+  }
+
+  @media screen and (min-width: 1280px) {
+    padding: 48px;
+  }
+}
+.inputWrap{
+  width: 100%;
+}
+
+.input {
+  width: 100%;
+  padding: 8px 0;
+  margin-bottom: 8px;
+  border: none;
+  outline: none;
+  border-bottom: 1px solid #97D28B;
+  color: #173D33;
+  font-family: "Fira Sans";
+  font-size: 18px;
+  letter-spacing: 0.04em;
+  background-color: transparent;
+
+    &::placeholder{
+      color: #BDBDBD;    
+      font-family: "Fira Sans";
+      font-size: 18px;
+      letter-spacing: -0.04em;
+    }
+}
+
+.errorInput{
+border-bottom: 1px solid #D28B8B;
+}
+
+.textInput{
+  height: 147px;   
+  vertical-align: top;
+  margin-bottom: 16px;
+  &::placeholder{ 
+    vertical-align: top;
+  }
+}
+
+.label{
+    letter-spacing: -0.04em;
+}
+
+.button{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* height: 39px; */
+  /* margin: 0 auto; */
+  padding: 3px 4px 3px 16px ;
+  
+  gap: 12px;
+  border-radius: 40px;
+  border: 1px solid #97D28B;
+  cursor: pointer;
+  color: #173D33;
+  
+    font-family: "Fira Sans";
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400; 
+  line-height: 1.13;
+  letter-spacing: -0.04em;
+  transition: background-color 250ms var(--transition-time), border-color 250ms var(--transition-time), color 250ms var(--transition-time);
+
+  &:hover {
+    background-color: #173D33;
+    border-color: #173D33;
+    color: #97D28B;
+  }
+  
+    @media screen and (min-width: 768px) {
+      align-self: self-start;
+    }
+}
+
+.arrowWrap {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  transform: rotate(45deg);
+  background-color: #97D28B;
+  stroke: #173D33;
+}
+
+.errorWrap {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+
+  @media screen and (min-width: 768px) {
+    height: 32px;
+  }
+}
+.error{
+  margin-left: auto;
+  margin-bottom: 6px;
+  color: #D28B8B;
+  text-align: right;
+  font-family: "Fira Sans";
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  letter-spacing: -0.04em;
+}

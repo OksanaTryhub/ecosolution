@@ -13,3 +13,6 @@ export { PodiumIcon } from './PodiumIcon';
 export { SliderArrowIcon } from './SliderArrowIcon';
 export { MinusIcon } from './MinusIcon';
 export { PlusIcon } from './PlusIcon';
+export { PhoneIcon } from './PhoneIcon';
+export { EmailIcon } from './EmailIcon';
+export { MapIcon } from './MapIcon';
