@@ -4,3 +4,11 @@
       height: 24px;
     }
 }
+
+.minusSvg,
+.plusSvg {
+  @media screen and (max-width: 767px) {
+    width: 16px;
+    height: 16px;
+  }
+}

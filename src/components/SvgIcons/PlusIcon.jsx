@@ -1,14 +1,14 @@
 import PropTypes from 'prop-types';
+import styles from './SvgIcons.module.css'
 
 export const PlusIcon = ({ id, className }) => {
   switch (id) {
     case 'svg':
       return (
-        <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <path d="M4 8H12" stroke="#97D28B" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
-          <path d="M8 12V4" stroke="#97D28B" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
+        <svg className={styles.plusSvg} xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 28 28" fill="none">
+          <path d="M7 14H21" stroke="#97D28B" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
+          <path d="M14 21V7" stroke="#97D28B" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
         </svg>
-
       );
     default:
       return <svg></svg>;

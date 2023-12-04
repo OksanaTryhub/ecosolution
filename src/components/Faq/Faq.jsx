@@ -18,29 +18,30 @@ const Faq = () => {
   return (
     <section className={styles.faq}>
       <div className={styles.container}>
-        <h2 className={styles.faq__title}>
+        <div className={styles.faq__largeWrapper}>
+          <h2 className={`${styles.faq__title} ${styles.faq__mobile}`}>
             Frequently Asked Questions
         </h2>
-        <ul className={styles.faq__questions}>
+        <ul className={styles.faq__list}>
       {faqData.map((item, index) => (
-        <li key={index} className="faq-item">
+        <li key={index} className={styles.faq__item}>
           <div
             className={styles.faq__question}
             onClick={() => toggleAnswer(index)}
           >
-            {openIndex === index
-              ? <button 
-              className={styles.faq__questionBtn}
-              onClick={() => toggleAnswer(index)}
+          {openIndex === index
+            ? <button 
+                className={styles.faq__questionBtn}
+                onClick={() => toggleAnswer(index)}
               >
-                <MinusIcon id="svg" />
+                <MinusIcon id="svg" className={styles.icons}/>
               </button>
-              : <button 
-              className={styles.faq__questionBtn}
-              onClick={() => toggleAnswer(index)}
+            : <button 
+                className={styles.faq__questionBtn}
+                onClick={() => toggleAnswer(index)}
               >
                 <PlusIcon id="svg" />                
-              </button>}            
+              </button>}  
             <div className={styles.faq__questionText}>{item.question}</div>
           </div>
           {openIndex === index && (
@@ -51,11 +52,23 @@ const Faq = () => {
         </li>
       ))}
         </ul>
-        <p className={styles.faq__text}>Didn't find the answer to your question? </p>
-        <button className={styles.faq__btn} type='button'>
+        <p className={`${styles.faq__text} ${styles.faq__mobile}`}>Didn't find the answer to your question? </p>
+        <button className={`${styles.faq__btn}  ${styles.faq__mobile}`} type='button'>
             Contact Us
           <ArrowDownIcon id="svg"/>
-        </button>
+          </button>
+          
+        <div className={styles.faq__large}>
+          <h2 className={styles.faq__title}>
+            Frequently Asked Questions
+          </h2>
+          <p className={styles.faq__text}>Didn't find the answer to your question? </p>
+          <button className={styles.faq__btn} type='button'>
+              Contact Us
+            <ArrowDownIcon id="svg"/>
+          </button>
+        </div>
+       </div>
       </div>
     </section>
   )
