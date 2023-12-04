@@ -9,10 +9,12 @@
 
   @media screen and (min-width: 768px) {
     padding: 36px 24px;
+    width: 342px;
   }
 
   @media screen and (min-width: 1280px) {
     padding: 48px;
+    width: 596px;
   }
 }
 .inputWrap{
@@ -57,12 +59,16 @@ border-bottom: 1px solid #D28B8B;
     letter-spacing: -0.04em;
 }
 
+.btnContainer{
+  display: flex;
+  width: 100%;
+  align-items: flex-end;
+}
+
 .button{
   display: flex;
   align-items: center;
   justify-content: center;
-  /* height: 39px; */
-  /* margin: 0 auto; */
   padding: 3px 4px 3px 16px ;
   
   gap: 12px;
@@ -71,10 +77,10 @@ border-bottom: 1px solid #D28B8B;
   cursor: pointer;
   color: #173D33;
   
-    font-family: "Fira Sans";
-    font-size: 16px;
-    font-style: normal;
-    font-weight: 400; 
+  font-family: "Fira Sans";
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400; 
   line-height: 1.13;
   letter-spacing: -0.04em;
   transition: background-color 250ms var(--transition-time), border-color 250ms var(--transition-time), color 250ms var(--transition-time);
@@ -86,7 +92,7 @@ border-bottom: 1px solid #D28B8B;
   }
   
     @media screen and (min-width: 768px) {
-      align-self: self-start;
+     
     }
 }
 

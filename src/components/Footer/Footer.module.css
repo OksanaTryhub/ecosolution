@@ -91,7 +91,7 @@
   transition: color 250ms var(--transition-time), stroke 250ms var(--transition-time);
 }
 
-.footer__social:hover .footer__socialIcon{
+.footer__socialIcon:hover {
   stroke: #97D28B;
   color: #97D28B;
 }
