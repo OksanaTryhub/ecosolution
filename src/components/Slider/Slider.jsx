@@ -1,117 +1,131 @@
-import React, { useState, useRef } from 'react';
-import styles from './Slider.module.css';
+import { useEffect, useState } from 'react';
+import { useWindowSize } from "react-use";
 
 import { slides } from '../../data/slides';
 import { SliderArrowIcon } from '../SvgIcons';
-// import slide1 from '../../images/slider/slider1.jpg';
-// import slide2 from '../../images/slider/slider2.jpg';
-// import slide3 from '../../images/slider/slider3.jpg';
-// import slide4 from '../../images/slider/slider4.jpg';
-// import slide5 from '../../images/slider/slider5.jpg';
 
-// const slides = [
-//   <img src={slide1} alt="Slide 1" />,
-//   <img src={slide2} alt="Slide 2" />,
-//   <img src={slide3} alt="Slide 3" />,
-//   <img src={slide4} alt="Slide 3" />,
-//   <img src={slide5} alt="Slide 3" />,
-// ];
+import styles from './Slider.module.css';
+
+const Slide = ({ image, title, description, date, ind }) => (
+  <div className={styles.slide}>
+    <img className={ styles.slide__image} src={image} alt={`Slide ${ind + 1}`} />
+    <div className={styles.slide__info}>
+      <div className={ styles.slide__titleWrap}>
+        <p className={styles.slide__title}>{title}</p>
+        <button className={styles.slide__arrow}>
+            <SliderArrowIcon id="svg" />
+        </button>
+      </div>
+      <div className={styles.slide__descriptionWrap}>
+        <p className={ styles.slide__description}>{description}</p>
+        <p className={ styles.slide__date}>{date}</p>
+      </div>
+    </div>
+  </div>
+);
 
 const Slider = () => {
-  const [index, setIndex] = useState(0); 
+  const [activeSlide, setActiveSlide] = useState(0);
+  const [isMobile, setIsMobile] = useState(false);
+  
   const [dragStartX, setDragStartX] = useState(0);
+  const windowWidth = useWindowSize().width;
+  
+  const slideCount = slides.length;
 
-  const handlePrev = () => {
-    setIndex((index - 1 + slides.length) % slides.length);
-  };
+    useEffect(() => {
+      setIsMobile(windowWidth < 768);
+    }, [isMobile, windowWidth]);
+  
+    const handleNextSlide = () => { 
+      setActiveSlide( (activeSlide ===  slides.length - 1) ? 0 : activeSlide + 1 )
+    };
 
-  const handleNext = () => {
-    setIndex((index + 1) % slides.length);
-  };
 
-  const handleTouchStart = (e) => {
-    setDragStartX(e.touches[0].clientX);
-  };
+    const handlePrevSlide = () => { 
+      setActiveSlide( activeSlide === 0 ? slides.length - 1 : activeSlide - 1 )
+    };
 
-  const handleTouchEnd = (e) => {
-    const dragEndX = e.changedTouches[0].clientX;
-    const difference = dragStartX - dragEndX;
+    const handleTouchStart = (e) => {
+      setDragStartX(e.touches[0].clientX);
+    };
 
-    if (Math.abs(difference) > 100) {
-      if (difference > 0) {
-        handleNext();
-      } else {
-        handlePrev();
+    const handleTouchEnd = (e) => {
+      const dragEndX = e.changedTouches[0].clientX;
+      const difference = dragStartX - dragEndX;
+
+      if (Math.abs(difference) > 100) {
+        if (difference > 0) {
+          handleNextSlide();
+        } else {
+          handlePrevSlide();
+        }
       }
-    }
-  };
+    };
 
-  const handleMouseDown = (e) => {
-    setDragStartX(e.clientX);
-    window.addEventListener('mouseup', handleMouseUp);
-  };
+    const handleMouseDown = (e) => {
+      setDragStartX(e.clientX);
+      window.addEventListener('mouseup', handleMouseUp);
+    };
 
-  const handleMouseUp = (e) => {
-    window.removeEventListener('mouseup', handleMouseUp);
-    const dragEndX = e.clientX;
-    const difference = dragStartX - dragEndX;
+    const handleMouseUp = (e) => {
+      window.removeEventListener('mouseup', handleMouseUp);
+      const dragEndX = e.clientX;
+      const difference = dragStartX - dragEndX;
 
-    if (Math.abs(difference) > 100) {
-      if (difference > 0) {
-        handleNext();
-      } else {
-        handlePrev();
+      if (Math.abs(difference) > 100) {
+        if (difference > 0) {
+          handleNextSlide();
+        } else {
+          handlePrevSlide();
+        }
       }
-    }
-  };
+    };
 
+  const slidesToRender = isMobile ? 1 : 2; 
+  
   return (
-    <div className={styles.sliderContainer}>
-      <div className={styles.sliderWrapper}>
-        <p className={styles.sliderCounter}>
-            01 /05
-        </p>
-        <div className={styles.sliderArrows}>
-          <button onClick={handlePrev} className={`${styles.sliderArrowWrap} ${styles.sliderArrowLeft}`}>
+    <div className={styles.slider__container}>
+      <div className={styles.slider__controls}> 
+        <div className={styles.slider__counter}>
+          <span className={styles.slider__counterActive}>
+            {`${activeSlide + 1}`.padStart(2, '0')}
+          </span>
+          <span className={styles.slider__counterQuantity}>
+            {'\n'} /{`${slideCount}`.padStart(2, '0')}
+          </span>
+        </div>
+        <div className={styles.slider__arrows}>
+          <button 
+            onClick={handlePrevSlide} 
+            className={`${styles.slider__arrowWrap} ${styles.slider__arrowLeft}`}
+          >
             <SliderArrowIcon id="svg" />
           </button>
-          <button onClick={handleNext} className={`${styles.sliderArrowWrap} ${styles.sliderArrowRight}`}>
+          <button 
+            onClick={handleNextSlide} 
+            className={`${styles.slider__arrowWrap} ${styles.slider__arrowRight}`}
+          >
             <SliderArrowIcon id="svg"/>
           </button>
         </div>
       </div>
       <div 
-        className={styles.slidesContainer}
+        className={styles.slide__container}
         onTouchStart={handleTouchStart}
         onTouchEnd={handleTouchEnd}
         onMouseDown={handleMouseDown}
       >
         {slides.map((slide, idx) => (
-          <div
-            key={idx} 
-            className={styles.slide}
-            style={{
-              transform: `translateX(${(idx - index) * 100}%)`
-            }}
-          >
-             <img className={ styles.slideImage} src={slide.image} alt={`Slide ${index + 1}`} />
-            <div className={styles.slideInfo}>
-              <div className={ styles.slideTitleWrap}>
-                <p className={styles.slideTitle}>{slide.title}</p>
-                <button className={styles.slideArrow}>
-                    <SliderArrowIcon id="svg" />
-                </button>
-              </div>
-            <div className={styles.slideDescriptionWrap}>
-              <p className={ styles.slideDescription}>{slide.description}</p>
-              <p className={ styles.slideDate}>{slide.date}</p>
-            </div>
-            </div>
-            {/* {slide} */}
-          </div>
-        ))}
+          <Slide
+            key={idx}
+            image={slide.image}
+            title={slide.title}
+            description={slide.description}
+            date={slide.date}
+          />
+        )).slice(activeSlide, activeSlide + slidesToRender)}
       </div>
-   
     </div>
   );
 };

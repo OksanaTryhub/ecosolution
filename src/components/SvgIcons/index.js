@@ -11,3 +11,5 @@ export { GlobeIcon } from './GlobeIcon';
 export { ChipIcon } from './ChipIcon';
 export { PodiumIcon } from './PodiumIcon';
 export { SliderArrowIcon } from './SliderArrowIcon';
+export { MinusIcon } from './MinusIcon';
+export { PlusIcon } from './PlusIcon';

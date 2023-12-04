@@ -1,7 +1,7 @@
 import Slider from '../Slider/Slider';
 // import { SliderArrowIcon } from '../SvgIcons';
 import styles from './Cases.module.css';
-// import { slides } from '../../data/slides'; 
+import { slides } from '../../data/slides'; 
 
 const Cases = () => {
   return (
@@ -12,8 +12,9 @@ const Cases = () => {
             Successful cases of our company
           </h2>
           
-          {/* <Slider slides={slides}/>  */}
-          <Slider /> 
+          <Slider slides={slides}/> 
+          {/* <Slider />  */}
+   
         </div>
       </div>
     </section>
