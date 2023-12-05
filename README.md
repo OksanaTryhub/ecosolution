@@ -1,70 +1,35 @@
-# Getting Started with Create React App
+# Ecosolution Website Interface
+Цей пет-проект представляє інтерфейсну частину цільової сторінки для компанії Ecosolution, яка займається розробкою та впровадженням альтернативних джерел енергії. Цей проект створено за допомогою React та має адаптивний дизайн з підходом Mobile First.
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Мета проекту
+Метою цього проекту є надання користувачам інформації про компанію Ecosolution, її діяльність та популяризація альтернативних джерел енергії.
 
-## Available Scripts
+## Технології
+Проект реалізовано з використанням бібліотеки React, що забезпечує швидке та ефективне взаємодію з користувачем. Дизайн створений з врахуванням принципів Mobile First, забезпечуючи оптимальний вигляд на різних пристроях.
 
-In the project directory, you can run:
+## Використані бібліотеки:
+- React Scroll для анімації вертикальної прокрутки
+- Formik для створення форм
+- Yup для валідації форм
+- Notiflix для створення сповіщень
 
-### `npm start`
+## [Ecosolution](https://ecosolution-sr.netlify.app/) 
+=====================================================
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+# Ecosolution Website Interface
+The pet project represents the interface part of the landing page for Ecosolution, a company engaged in the development and implementation of alternative energy sources.
+This project was created using React and has a responsive layout with a Mobile First approach.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Project Goal
+The aim of this project is to provide users with information about the company Ecosolution, its activities, and to promote alternative energy sources.
 
-### `npm test`
+## Technologies
+The project is built using the React library, ensuring fast and efficient interaction with the user. The layout is designed with the principles of Mobile First, ensuring optimal display on various devices.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Libraries Used:
+- React Scroll for animating vertical scrolling
+- Formik for form creation
+- Yup for form validation
+- Notiflix for creating notifications
 
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+## [Ecosolution](https://ecosolution-sr.netlify.app/) 
