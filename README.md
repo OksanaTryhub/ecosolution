@@ -8,10 +8,10 @@
 Проект реалізовано з використанням бібліотеки React, що забезпечує швидке та ефективне взаємодію з користувачем. Дизайн створений з врахуванням принципів Mobile First, забезпечуючи оптимальний вигляд на різних пристроях.
 
 ## Використані бібліотеки:
-- React Scroll для анімації вертикальної прокрутки
-- Formik для створення форм
-- Yup для валідації форм
-- Notiflix для створення сповіщень
+- [React Scroll](https://www.npmjs.com/package/react-scroll) для анімації вертикальної прокрутки
+- [Formik](https://formik.org/) для створення форм
+- [Yup](https://www.npmjs.com/package/yup) для валідації форм
+- [Notiflix](https://notiflix.github.io/) для створення сповіщень
 
 ## [Ecosolution](https://ecosolution-sr.netlify.app/) 
 =====================================================
@@ -27,9 +27,9 @@ The aim of this project is to provide users with information about the company E
 The project is built using the React library, ensuring fast and efficient interaction with the user. The layout is designed with the principles of Mobile First, ensuring optimal display on various devices.
 
 ## Libraries Used:
-- React Scroll for animating vertical scrolling
-- Formik for form creation
-- Yup for form validation
-- Notiflix for creating notifications
+- [React Scroll](https://www.npmjs.com/package/react-scroll) for animating vertical scrolling
+- [Formik](https://formik.org/) for form creation
+- [Yup](https://www.npmjs.com/package/yup) for form validation
+- [Notiflix](https://notiflix.github.io/) for creating notifications
 
 ## [Ecosolution](https://ecosolution-sr.netlify.app/) 
