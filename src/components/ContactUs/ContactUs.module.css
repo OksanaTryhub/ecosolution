@@ -89,18 +89,29 @@
 
 .contacts__detailTitle{
   padding-bottom: 8px;
+  @media screen and (min-width: 1280px) {
+      padding-bottom: 16px;
+    }
 }
 
 .contacts__detailLink {
   display: flex;
   align-items: center;
   gap: 8px;
-  
+  font-size: 18px;
+  @media screen and (min-width: 768px) {
+    font-size: 20px;   
+  }  
+  @media screen and (min-width: 1280px) {
+    font-size: 24px;   
+  }  
 }
+
 .contacts__detailLink  svg {
   stroke: #173D33;
   transition: stroke 250ms var(--transition-time);
 }
+
 .contacts__detailLink:hover svg{
   stroke: #97D28B;
 } 

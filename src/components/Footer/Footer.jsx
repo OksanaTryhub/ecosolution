@@ -1,10 +1,10 @@
-import React from 'react'
+import { Link as ScrollLink } from 'react-scroll';
 import { LogoIcon, ArrowUpIcon, InstagramIcon, FbIcon } from '../SvgIcons';
+import scrollToComponent from '../../utils/scrollToComponent';
 import styles from './Footer.module.css';
 
-
-
 const Footer = () => {
+    
   return (
     <footer className={styles.footer}>
       <div className={`${styles.container} ${styles.container__sm}`}>
@@ -80,9 +80,16 @@ const Footer = () => {
           <a href="mailto:office@ecosolution.com" className={styles.footer__contactsLink} >office@ecosolution.com</a>
         </div>
         <div className={`${styles.footer__large} ${styles.block3}`}>
-          <button type='button' className={styles.footer__upArrowBtn}>
-            <ArrowUpIcon id="svg" />        
-          </button>
+          <ScrollLink
+            to="main"
+            spy={true}
+            smooth="ease"
+            duration={2000}
+            onClick={() => scrollToComponent('main', 2000)}
+            className={styles.footer__upArrowBtn}
+          >
+              <ArrowUpIcon id="svg" />   
+          </ScrollLink> 
           <p className={styles.footer__rights}>ecosolution &#169; 2023</p>
         </div>
         </div>

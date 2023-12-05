@@ -4,7 +4,7 @@ import styles from './ContactUs.module.css';
 
 const ContactUs = () => {
   return (
-    <section className={styles.contacts}>
+    <section id="contact" className={styles.contacts}>
       <div className={styles.container}>
         <h2 className={styles.contacts__title}>
             Contact us
@@ -62,7 +62,7 @@ const ContactUs = () => {
           </li>          
         </ul>
         <ContactForm/>
-       </div>
+        </div>
       </div>
     </section>
   )

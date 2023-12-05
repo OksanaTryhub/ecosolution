@@ -40,6 +40,10 @@
       font-size: 18px;
       letter-spacing: -0.04em;
     }
+
+    @media screen and (min-width: 1280px) {
+      font-size: 20px;
+    }
 }
 
 .errorInput{
@@ -62,7 +66,7 @@ border-bottom: 1px solid #D28B8B;
 .btnContainer{
   display: flex;
   width: 100%;
-  align-items: flex-end;
+  justify-content: flex-end;
 }
 
 .button{
@@ -70,6 +74,7 @@ border-bottom: 1px solid #D28B8B;
   align-items: center;
   justify-content: center;
   padding: 3px 4px 3px 16px ;
+  
   
   gap: 12px;
   border-radius: 40px;
@@ -90,10 +95,6 @@ border-bottom: 1px solid #D28B8B;
     border-color: #173D33;
     color: #97D28B;
   }
-  
-    @media screen and (min-width: 768px) {
-     
-    }
 }
 
 .arrowWrap {

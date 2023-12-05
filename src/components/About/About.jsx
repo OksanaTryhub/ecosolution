@@ -13,7 +13,7 @@ import styles from './About.module.css';
 
 const About = () => {
   return (
-    <section className={styles.about}>
+    <section id="about" className={styles.about}>
       <div className={styles.container}>
         <div className={styles.about__titleWrap}>
           <h2 className={styles.about__title}>
@@ -40,52 +40,52 @@ const About = () => {
           </li>
           <li className={`${styles.about__valueImg} ${styles.img1}`}>
             <div className={styles.about__img1}>
-             <picture className={styles.about__img}>
-              <source
-                type="image/jpeg"
-                media="(min-width: 768px) and (max-width: 1279px)"
-                sizes="(min-width: 342w)  684w, 342w"
-                srcSet={`${img2Tab} 342w, ${img2Tab2x}  684w`}
-              />
+              <picture className={styles.about__img}>
+                <source
+                  type="image/jpeg"
+                  media="(min-width: 768px) and (max-width: 1279px)"
+                  sizes="(min-width: 342w)  684w, 342w"
+                  srcSet={`${img2Tab} 342w, ${img2Tab2x}  684w`}
+                />
 
-              <source
-                type="image/jpeg"
-                media="(min-width: 1280px)"
-                sizes="(min-width: 596w) 1192w, 596w"
-                srcSet={`${img2Desk} 596w, ${img2Desk2x} 1192w`}
-              />
+                <source
+                  type="image/jpeg"
+                  media="(min-width: 1280px)"
+                  sizes="(min-width: 596w) 1192w, 596w"
+                  srcSet={`${img2Desk} 596w, ${img2Desk2x} 1192w`}
+                />
 
-              <img
-                srcSet={`${img2Tab} 342w, ${img2Tab2x} 684w`}           
-                src="../../images/main-bg.jpg"
-                alt="Wind farm fields"
-              />
-            </picture>
+                <img
+                  srcSet={`${img2Tab} 342w, ${img2Tab2x} 684w`}           
+                  src="../../images/main-bg.jpg"
+                  alt="Wind farm fields"
+                />
+              </picture>
             </div>
           </li>
           <li className={`${styles.about__valueImg} ${styles.img2}`}>
             <div className={styles.about__img2}>
-             <picture className={styles.about__img}>
-              <source
-                type="image/jpeg"
-                media="(min-width: 768px) and (max-width: 1279px)"
-                sizes="(min-width: 342w)  684w, 342w"
-                srcSet={`${img1Tab} 342w, ${img1Tab2x}  684w`}
-              />
+              <picture className={styles.about__img}>
+                <source
+                  type="image/jpeg"
+                  media="(min-width: 768px) and (max-width: 1279px)"
+                  sizes="(min-width: 342w)  684w, 342w"
+                  srcSet={`${img1Tab} 342w, ${img1Tab2x}  684w`}
+                />
 
-              <source
-                type="image/jpeg"
-                media="(min-width: 1280px)"
-                sizes="(min-width: 596w) 1192w, 596w"
-                srcSet={`${img1Desk} 596w, ${img1Desk2x} 1192w`}
-              />
+                <source
+                  type="image/jpeg"
+                  media="(min-width: 1280px)"
+                  sizes="(min-width: 596w) 1192w, 596w"
+                  srcSet={`${img1Desk} 596w, ${img1Desk2x} 1192w`}
+                />
 
-              <img
-                srcSet={`${img1Tab} 342w, ${img1Tab2x} 684w`}           
-                src="../../images/main-bg.jpg"
-                alt="Man working in a field with solar panels"
-              />
-            </picture>
+                <img
+                  srcSet={`${img1Tab} 342w, ${img1Tab2x} 684w`}           
+                  src="../../images/main-bg.jpg"
+                  alt="Man working in a field with solar panels"
+                />
+              </picture>
             </div>
           </li>
           

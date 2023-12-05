@@ -1,14 +1,24 @@
-.header {
-  /* position: fixed; */
+.header { 
+  position: fixed;
   width: 100%;
   background-color: #F3F5FA;
   padding: 36px 0;
+  transition: background-color 250ms var(--transition-time);
+
+  &.stickyHeader{
+    position: fixed;
+    top: 0; 
+    z-index: 10;
+    background-color: #fff;
+  }
+  
   @media screen and (min-width: 1280px) {
     padding: 24px 0;
   }
 }
 
 .container {
+  position: relative;
   max-width: 480px;
   padding: 0 20px;
   margin: 0 auto;
@@ -26,6 +36,13 @@
     max-width: 1280px;
     padding: 0 19px;
   }
+}
+
+.header__burger{
+  position: absolute;
+    top: 0;
+    right: 20px;
+    z-index: 1000;
 }
 
 .header__container {
@@ -100,4 +117,15 @@
 
 .header__navLink:hover svg {
   fill: #97D28B;
+}
+
+.backdrop {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(23, 61, 51, 0.25);
+
+  backdrop-filter: blur(2px);
 }

@@ -1,7 +1,4 @@
-.burgerMenu{
-  position: absolute;
-  top: 36px;
-  right: 20px;
+.burgerMenu{ 
   width: 320px;
   height: calc(100vh - 72px);
   display: flex;
@@ -68,14 +65,13 @@
 .burgerMenu__item {
   font-size: 24px;
   letter-spacing: -0.04em;
-
-  
 }
 
 .burgerMenu__link{
   display: flex;
   align-items: center;
   gap: 8px;
+  cursor: pointer;
 
   color: rgba(255, 255, 255, 0.25);
     stroke: #ffffff;
@@ -98,6 +94,8 @@
 }
 
 .burgerMenu__socials{
+  position: absolute;
+  bottom: 24px;
   display: flex;
   gap: 8px;
 }

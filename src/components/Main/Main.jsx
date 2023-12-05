@@ -1,3 +1,5 @@
+import { Link as ScrollLink } from 'react-scroll';
+import scrollToComponent from '../../utils/scrollToComponent';
 import { ArrowRightIcon } from '../SvgIcons';
 import mainBg from '../../images/main-bg.jpg';
 import mainBg2x from '../../images/main-bg@2x.jpg';
@@ -7,21 +9,29 @@ import mainBgDesk from '../../images/main-bg-desk.jpg';
 import mainBgDesk2x from '../../images/main-bg-desk@2x.jpg';
 import styles from './Main.module.css';
 
-const Main = () => {
+const Main = () => { 
+
   return (
-    <section className={styles.main}>
+    <section id="main" className={styles.main}>
       <div className={styles.container}>
         <div className={styles.main__wrap}>
           <h1 className={styles.main__title}>RENEWABLE ENERGY For any task</h1>
           <div className={styles.main__textWrap}>
             <p className={styles.main__text}>Development and implementation of renewable non-polluting energy sources, generating power generation using energy wind, sun, water, biomass</p>
         
-            <a className={styles.main__link} href='#contact'>
+            <ScrollLink
+            to="cases"
+            spy={true}
+            smooth="ease"
+            duration={2000}
+            onClick={() => scrollToComponent('cases', 2000)}
+            className={styles.main__link}
+            >
               Learn more
               <div className={styles.arrowWrap}>
                 <ArrowRightIcon id="svg" />
-              </div>
-            </a>
+              </div>              
+          </ScrollLink>
           </div>
         </div>
         

@@ -4,7 +4,7 @@ import { slides } from '../../data/slides';
 
 const Cases = () => {
   return (
-    <section className={styles.cases}>
+    <section id="cases" className={styles.cases}>
       <div className={styles.container}>
         <div className={styles.cases__titleWrap}>
           <h2 className={styles.cases__title}>
