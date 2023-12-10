@@ -42,7 +42,6 @@
 
 }
 .faq__title {
-  /* width: 286px; */
   font-family: "Oswald";
   font-size: 28px;
   font-weight: 400;
@@ -150,6 +149,7 @@ padding: 16px 0;
   letter-spacing: -0.04em;
   transition: color 250ms var(--transition-time), background-color 250ms var(--transition-time);
   margin: 0 auto;
+  cursor: pointer;
  
   @media screen and (min-width: 768px) {
     &:hover {

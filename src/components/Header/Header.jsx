@@ -2,10 +2,9 @@ import { useState, useEffect } from "react";
 import { Link as ScrollLink } from 'react-scroll';
 import { LogoIcon, MenuIcon,ArrowDownIcon } from '../SvgIcons';
 import BurgerMenu from '../BurgerMenu/BurgerMenu';
-import scrollToComponent from "../../utils/scrollToComponent";
 import styles from './Header.module.css';
 
-const Header = () => {
+const Header = ({ scrollToSection }) => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isOpen, setIsOpen] = useState(false);
 
@@ -36,10 +35,6 @@ const Header = () => {
     setIsOpen(false);
   }
   };
-
-  const handleScrollToComponent = (componentId, duration) => () => {
-    scrollToComponent(componentId, duration);
-  }; 
     
   return (
     <header id="header" className={`${styles.header} ${isScrolled ? styles.stickyHeader : ''}`}
@@ -57,7 +52,6 @@ const Header = () => {
             spy={true}
             smooth="ease"
             duration={2000}
-            onClick={handleScrollToComponent('contact', 2000)}
             className={styles.header__navLink}
           >
             Get in touch

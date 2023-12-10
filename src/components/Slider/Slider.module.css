@@ -67,6 +67,7 @@
   stroke: #173D33;
   border: 1px solid;
   border-color: #173D33;
+  cursor: pointer;
   transition: border-color 250ms var(--transition-time), stroke 250ms var(--transition-time);
 
   &:hover {
@@ -168,6 +169,7 @@
 .slide__arrow{
   width: 60px;
   height: 60px;
+  cursor: pointer;
   border-radius: 50%;
   background: #97D28B;
   stroke: #173D33;

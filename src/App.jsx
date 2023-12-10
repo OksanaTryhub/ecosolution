@@ -1,4 +1,3 @@
-import './App.css';
 import Header from './components/Header';
 import Main from './components/Main';
 import About from './components/About';
@@ -7,6 +6,8 @@ import Faq from './components/Faq';
 import ContactUs from './components/ContactUs';
 import Footer from './components/Footer';
 import Electricity from './components/Electricity/Electricity';
+
+import './App.css';
 
 function App() {
   return (

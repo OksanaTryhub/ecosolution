@@ -1,15 +1,9 @@
 import { Link as ScrollLink} from 'react-scroll';
 
 import { CloseIcon, FbIcon, InstagramIcon, ArrowRightIcon } from '../SvgIcons';
-import scrollToComponent from '../../utils/scrollToComponent';
 import styles from './BurgerMenu.module.css';
 
 const BurgerMenu = ({ toggleMenu, isOpen, className }) => {
-
-  const handleScrollToComponent = (componentId, duration) => () => {
-    scrollToComponent(componentId, duration);
-    toggleMenu(); 
-  };  
 
   return (
     <div className={`${className} ${styles.burgerMenu}`} style={{display: isOpen ? "block" : "none"}}>
@@ -24,7 +18,7 @@ const BurgerMenu = ({ toggleMenu, isOpen, className }) => {
             spy={true}
             smooth="ease"
             duration={3000}
-            onClick={handleScrollToComponent('main', 2500)}
+            onClick={toggleMenu}
             className={styles.burgerMenu__link}
           >
             Main       
@@ -37,7 +31,7 @@ const BurgerMenu = ({ toggleMenu, isOpen, className }) => {
             spy={true}
             smooth="ease"
             duration={2500}
-            onClick={handleScrollToComponent('about', 2500)}
+            onClick={toggleMenu}
             className={styles.burgerMenu__link}
           >
             About       
@@ -50,7 +44,7 @@ const BurgerMenu = ({ toggleMenu, isOpen, className }) => {
             spy={true}
             smooth="ease"
             duration={2500}
-            onClick={handleScrollToComponent('cases', 2500)}
+            onClick={toggleMenu}
             className={styles.burgerMenu__link}
           >
             Cases       
@@ -63,7 +57,7 @@ const BurgerMenu = ({ toggleMenu, isOpen, className }) => {
             spy={true}
             smooth="ease"
             duration={2500}
-            onClick={handleScrollToComponent('faq', 2500)}
+            onClick={toggleMenu}
             className={styles.burgerMenu__link}
           >
             FAQ       
@@ -76,7 +70,7 @@ const BurgerMenu = ({ toggleMenu, isOpen, className }) => {
             spy={true}
             smooth="ease"
             duration={2500}
-            onClick={handleScrollToComponent('contact', 2500)}
+            onClick={toggleMenu}
             className={styles.burgerMenu__link}
           >
             Contact Us       

@@ -3,7 +3,6 @@ import { Link as ScrollLink } from 'react-scroll';
 
 import { ArrowDownIcon, MinusIcon, PlusIcon } from '../SvgIcons';
 import { faqData } from './../../data/faqData';
-import scrollToComponent from '../../utils/scrollToComponent';
 
 import styles from './Faq.module.css';
 
@@ -12,10 +11,6 @@ const Faq = () => {
 
   const toggleAnswer = (index) => {
     setOpenIndex(index === openIndex ? -1 : index);
-  };
-
-  const handleScrollToComponent = (componentId, duration) => () => {
-    scrollToComponent(componentId, duration);
   };
 
   return (
@@ -71,7 +66,6 @@ const Faq = () => {
               spy={true}
               smooth="ease"
               duration={1000}
-              onClick={handleScrollToComponent('contact', 1000)}
               className={styles.faq__btn}
               >
                 Contact Us

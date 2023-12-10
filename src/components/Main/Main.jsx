@@ -1,5 +1,4 @@
 import { Link as ScrollLink } from 'react-scroll';
-import scrollToComponent from '../../utils/scrollToComponent';
 import { ArrowRightIcon } from '../SvgIcons';
 import mainBg from '../../images/main-bg.jpg';
 import mainBg2x from '../../images/main-bg@2x.jpg';
@@ -10,10 +9,6 @@ import mainBgDesk2x from '../../images/main-bg-desk@2x.jpg';
 import styles from './Main.module.css';
 
 const Main = () => { 
-
-  const handleScrollToComponent = (componentId, duration) => () => {
-    scrollToComponent(componentId, duration);
-  }; 
 
   return (
     <section id="main" className={styles.main}>
@@ -28,7 +23,6 @@ const Main = () => {
             spy={true}
             smooth="ease"
             duration={2000}
-            onClick={handleScrollToComponent('cases', 2000)}
             className={styles.main__link}
             >
               Learn more

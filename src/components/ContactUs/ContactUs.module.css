@@ -96,6 +96,7 @@
 
 .contacts__detailLink {
   display: flex;
+  width: fit-content; 
   align-items: center;
   gap: 8px;
   font-size: 18px;
