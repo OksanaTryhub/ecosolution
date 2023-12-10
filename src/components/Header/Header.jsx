@@ -37,9 +37,9 @@ const Header = () => {
   }
   };
 
-  function scrollToContact() {
-  scrollToComponent('contact', 2000);
-}
+  const handleScrollToComponent = () => {
+    scrollToComponent('contact', 2000);
+  };
     
   return (
     <header id="header" className={`${styles.header} ${isScrolled ? styles.stickyHeader : ''}`}
@@ -57,7 +57,7 @@ const Header = () => {
             spy={true}
             smooth="ease"
             duration={2000}
-            onClick={scrollToContact}
+            onClick={handleScrollToComponent}
             className={styles.header__navLink}
           >
             Get in touch
