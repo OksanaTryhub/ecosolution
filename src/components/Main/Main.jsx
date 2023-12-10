@@ -11,6 +11,10 @@ import styles from './Main.module.css';
 
 const Main = () => { 
 
+  const handleScrollToComponent = (componentId, duration) => () => {
+    scrollToComponent(componentId, duration);
+  }; 
+
   return (
     <section id="main" className={styles.main}>
       <div className={styles.container}>
@@ -24,7 +28,7 @@ const Main = () => {
             spy={true}
             smooth="ease"
             duration={2000}
-            onClick={() => scrollToComponent('cases', 2000)}
+            onClick={handleScrollToComponent('cases', 2000)}
             className={styles.main__link}
             >
               Learn more

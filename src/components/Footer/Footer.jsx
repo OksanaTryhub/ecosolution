@@ -4,6 +4,10 @@ import scrollToComponent from '../../utils/scrollToComponent';
 import styles from './Footer.module.css';
 
 const Footer = () => {
+
+  const handleScrollToComponent = (componentId, duration) => () => {
+    scrollToComponent(componentId, duration);
+  }; 
     
   return (
     <footer className={styles.footer}>
@@ -85,7 +89,7 @@ const Footer = () => {
             spy={true}
             smooth="ease"
             duration={2000}
-            onClick={() => scrollToComponent('main', 2000)}
+            onClick={handleScrollToComponent('main', 2000)}
             className={styles.footer__upArrowBtn}
           >
               <ArrowUpIcon id="svg" />   

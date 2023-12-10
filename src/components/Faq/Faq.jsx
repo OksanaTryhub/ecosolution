@@ -14,6 +14,10 @@ const Faq = () => {
     setOpenIndex(index === openIndex ? -1 : index);
   };
 
+  const handleScrollToComponent = (componentId, duration) => () => {
+    scrollToComponent(componentId, duration);
+  };
+
   return (
     <section id="faq" className={styles.faq}>
       <div className={styles.container}>
@@ -67,7 +71,7 @@ const Faq = () => {
               spy={true}
               smooth="ease"
               duration={1000}
-              onClick={() => scrollToComponent('contact', 1000)}
+              onClick={handleScrollToComponent('contact', 1000)}
               className={styles.faq__btn}
               >
                 Contact Us
