@@ -71,7 +71,7 @@ const ContactForm = () => {
               <ErrorMessage name="phone" component="div" className={styles.error}/>
             </div>
             <div className={styles.inputWrap}>
-              <label className={styles.label} htmlFor="phone">Message:</label>
+              <label className={styles.label} htmlFor="message">Message:</label>
                 <Field
                   id="message"
                   as="textarea"
