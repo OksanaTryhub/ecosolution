@@ -38,7 +38,7 @@ const Header = () => {
   };
 
   const handleScrollToComponent = () => {
-    scrollToComponent('contact', 2000);
+    scrollToComponent({ componentId: 'contact', duration: 2000 });
   };
     
   return (
